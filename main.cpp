@@ -63,7 +63,6 @@ class car
 
 
 }a,a1;
-//brought to you by code-projects.org
 void delete_record()
 {
 	int n;
@@ -170,14 +169,6 @@ int main()
        		}
        		break;
    }
-
-   		case 5:
-		   {
-		   	system("CLS");
-		   	cout<<"\n\n\n\t\t\tBrought To You By: code-projects.org \n";
-		   exit(0);
-   			break;
-   		}
    		default :
 		   {
 		   cout<<"\n\n\t\t Invalid input";
