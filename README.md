@@ -1,33 +1,53 @@
 # Multilevel Car Parking System 🚗
 
 ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![System](https://img.shields.io/badge/System-Console--Based-green?style=for-the-badge)
-![Data](https://img.shields.io/badge/Data-File_Handling-blue?style=for-the-badge)
+![Persistence](https://img.shields.io/badge/Data-Binary_File_I%2FO-blue?style=for-the-badge)
+![OOP](https://img.shields.io/badge/Design-OOP-green?style=for-the-badge)
 
 ## 📖 Overview
 
-A **C++ Console Application** to manage a multilevel car parking facility. It handles vehicle arrival, departure, and billing calculation using file handling (`parking3.dat`) to persist records.
+A comprehensive **C++ Console Application** designed to manage a multi-level parking facility. It demonstrates Object-Oriented Programming (OOP) principles and persistent data storage using binary file handling.
 
-## ✨ Features
+## 🏗️ Class Architecture
 
--   **Secure Login**: Password-protected access (Default password: `pass`).
--   **Vehicle Entry**: Records driver name, vehicle number, and duration.
--   **VIP Logic**: Different billing rates for VIP vs. regular customers.
--   **Billing**: Automatically calculates parking charges upon check-out.
--   **Persistence**: Saves records to a binary file, so data isn't lost on exit.
+### `class car`
+The core entity representing a parking record.
+-   **Attributes**:
+    -   `vno` (int): Vehicle license number.
+    -   `count` (float): Duration of stay (hours).
+    -   `dname` (char[]): Driver's name.
+    -   `l` (char[]): Parking slot identifier.
+-   **Methods**:
+    -   `input()`: Captures driver details and validates parking slot availability.
+    -   `cal()`: Calculates billing based on generic vs. VIP rates.
+    -   `output()`: Displays the receipt details.
+
+## 💾 Data Persistence (File Handling)
+
+The system avoids data loss using C++ File Streams (`<fstream>`):
+-   **Storage**: Records are stored in `parking3.dat`.
+-   **Mechanism**:
+    -   `ifstream`: Reads existing records in binary mode (`ios::binary | ios::in`).
+    -   `ofstream`: Appends new parking entries (`ios::binary | ios::app`).
+-   **Deletion Logic**:
+    -   Creates a temporary file `temp.dat`.
+    -   Copies all records *except* the one being deleted.
+    -   Removes the old file and renames the temp file.
+
+## 🔐 Security Features
+
+-   **Login System**: A basic authentication mechanism checks against a hardcoded "admin" password (`pass`) using character masking (`*`) for security during input.
 
 ## 🚀 Usage
 
-1.  **Compile**:
+1.  Compile:
     ```bash
     g++ main.cpp -o parking_system
     ```
-2.  **Run**:
+2.  Run:
     ```bash
     ./parking_system
     ```
-3.  **Login**: Enter `pass` when prompted.
-4.  **Menu**: Use the number keys to select an option (Arrival, Departure, View Records, etc.).
 
 ## 🤝 Contributing
 
