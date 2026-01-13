@@ -1,51 +1,43 @@
-# Car Parking Reservation System 🚗
+# Multilevel Car Parking System 🚗
 
-A robust **C++ console-based application** designed to manage vehicle parking allocations, billing, and record-keeping efficiently.
+![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![System](https://img.shields.io/badge/System-Console--Based-green?style=for-the-badge)
+![Data](https://img.shields.io/badge/Data-File_Handling-blue?style=for-the-badge)
 
-![C++](https://img.shields.io/badge/Language-C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+## 📖 Overview
+
+A **C++ Console Application** to manage a multilevel car parking facility. It handles vehicle arrival, departure, and billing calculation using file handling (`parking3.dat`) to persist records.
 
 ## ✨ Features
 
-- **Secure Login**: Password-protected access to the system.
-- **Vehicle Arrival**: Records driver name, car number, hours of stay, and time slot.
-- **Parking Allocation**: automatically checks for availability before allocating space.
-- **Billing System**: Calculates parking charges based on duration and VIP status.
-- **Record Management**: View all parked cars and delete records upon departure.
+-   **Secure Login**: Password-protected access (Default password: `pass`).
+-   **Vehicle Entry**: Records driver name, vehicle number, and duration.
+-   **VIP Logic**: Different billing rates for VIP vs. regular customers.
+-   **Billing**: Automatically calculates parking charges upon check-out.
+-   **Persistence**: Saves records to a binary file, so data isn't lost on exit.
 
-## 🚀 Getting Started
+## 🚀 Usage
 
-### Prerequisites
-
-- A C++ Compiler (GCC, Clang, or MSVC).
-
-### Installation & Usage
-
-1.  **Clone the repository**:
-    ```bash
-    git clone https://github.com/officialsimranagarwal/multilevel-car-parking-system.git
-    cd multilevel-car-parking-system
-    ```
-
-2.  **Compile the code**:
+1.  **Compile**:
     ```bash
     g++ main.cpp -o parking_system
     ```
-
-3.  **Run the application**:
+2.  **Run**:
     ```bash
     ./parking_system
     ```
-    *Note: The default password is `pass`.*
-
-## 🛠️ Tech Stack
-
-- **Language**: C++
-- **File Handling**: Uses binary files (`parking3.dat`) for data persistence.
+3.  **Login**: Enter `pass` when prompted.
+4.  **Menu**: Use the number keys to select an option (Arrival, Departure, View Records, etc.).
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please check the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines.
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
-## 📄 License
+## 👤 Author
 
-This project is open source and available under the [MIT License](LICENSE).
+**Simran Agarwal**
+-   [Profile](https://github.com/officialsimranagarwal)
+-   [LinkedIn](https://linkedin.com/in/simran-agarwal-54751b191)
+
+---
+*Generated with ❤️ by Simran Agarwal*
